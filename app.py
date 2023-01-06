@@ -1,14 +1,10 @@
 import streamlit as st 
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 from pathlib import Path
-import tempfile
 from tempfile import NamedTemporaryFile
 import os, shutil
-import cv2
 from PIL import Image
 from deepface import DeepFace
+
 
 st.title("Performance analysis of 'Face Recognition Models' in cloud platform")
 
@@ -33,31 +29,6 @@ def recognise(img1, img2):
     models = ["VGG-Face", "Facenet", "Facenet512"]
     result = DeepFace.verify(img1_path = img1, img2_path = img2,detector_backend = backends[3],model_name =models[0])
     return result
-# def uploadFile():
-#     st.header("Upload Image ")
-#     column1, column2 = st.columns(2)
-#     with column1:
-#         image1 = st.file_uploader('Choose 1st Image(Normal)', type = ['jpg','jpeg','png'])
-#     with column2:
-#         image2 = st.file_uploader('Choose 2nd Image(with Specs/ Mask/ Beard if Male)', type = ['jpg','jpeg','png'])
-            
-#     if(image1 is not None) & (image2 is not None):
-#         # col1 , col2 = st.columns(2)
-#         # image_1 = Image.open(image1)
-#         # image_2 = Image.open(image2)
-#         # with col1: 
-#         #     st.image(image_1)
-#         with open(os.path.join("tempDir",image1.name), "wb") as f:
-#             f.write(image1.getbuffer())
-#             st.success('Saved imag1')
-#         # with col2:
-#         #     st.image(image_2)
-#         with open(os.path.join("tempDir",image2.name), "wb") as g:
-#             g.write(image2.getbuffer())
-#             st.success('Saved imag2')
-#         return (image1,image2)
-#     else:
-#         st.error("Please select Valid file")
         
         
 def main():
