@@ -89,3 +89,4 @@ validators==0.20.0
 Werkzeug==2.2.2
 wrapt==1.14.1
 zipp==3.11.0
+protobuf==3.18.3
