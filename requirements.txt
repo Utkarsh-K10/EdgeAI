@@ -70,10 +70,10 @@ six==1.16.0
 smmap==5.0.0
 soupsieve==2.3.2.post1
 streamlit==1.16.0
-tensorboard==2.11.0
+tensorboard==2.10.1
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
-tensorflow==2.5.3
+tensorflow==2.7.1
 tensorflow-estimator==2.11.0
 tensorflow-io-gcs-filesystem==0.28.0
 termcolor==2.1.1
