@@ -2,3 +2,4 @@ streamlit
 deepface
 tensorflow==2.7.3
 keras==2.7.0
+protobuf==3.19.6
